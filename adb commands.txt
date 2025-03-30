@@ -1,0 +1,255 @@
+Check for connected devices:
+
+bash
+Copy
+Edit
+adb devices
+Start ADB server:
+
+bash
+Copy
+Edit
+adb start-server
+Stop ADB server:
+
+bash
+Copy
+Edit
+adb kill-server
+Restart ADB server:
+
+bash
+Copy
+Edit
+adb restart-server
+Device Interaction:
+Get device information:
+
+bash
+Copy
+Edit
+adb shell getprop
+Check device logs:
+
+bash
+Copy
+Edit
+adb logcat
+Reboot the device:
+
+bash
+Copy
+Edit
+adb reboot
+Reboot to recovery:
+
+bash
+Copy
+Edit
+adb reboot recovery
+Reboot to bootloader:
+
+bash
+Copy
+Edit
+adb reboot bootloader
+File Management:
+Push a file to the device:
+
+bash
+Copy
+Edit
+adb push <local-file> <remote-location>
+Pull a file from the device:
+
+bash
+Copy
+Edit
+adb pull <remote-file> <local-location>
+Copy file from PC to device:
+
+bash
+Copy
+Edit
+adb shell cp <source> <destination>
+App Installation & Management:
+Install an APK:
+
+bash
+Copy
+Edit
+adb install <apk-file>
+Uninstall an app:
+
+bash
+Copy
+Edit
+adb uninstall <package-name>
+Install APK with options (e.g., reinstall):
+
+bash
+Copy
+Edit
+adb install -r <apk-file>
+App Management:
+List installed packages:
+
+bash
+Copy
+Edit
+adb shell pm list packages
+Start an app:
+
+bash
+Copy
+Edit
+adb shell am start -n <package>/<activity>
+Stop an app:
+
+bash
+Copy
+Edit
+adb shell am force-stop <package>
+Screen and Input:
+Take a screenshot:
+
+bash
+Copy
+Edit
+adb shell screencap -p /sdcard/screen.png
+Record the screen:
+
+bash
+Copy
+Edit
+adb shell screenrecord /sdcard/demo.mp4
+Simulate touch event:
+
+bash
+Copy
+Edit
+adb shell input tap <x> <y>
+Simulate key press:
+
+bash
+Copy
+Edit
+adb shell input keyevent <keycode>
+Simulate text input:
+
+bash
+Copy
+Edit
+adb shell input text "Hello World"
+Shell Commands:
+Enter ADB shell:
+
+bash
+Copy
+Edit
+adb shell
+Execute command inside ADB shell:
+
+bash
+Copy
+Edit
+adb shell <command>
+Wireless ADB:
+Connect wirelessly to a device:
+
+bash
+Copy
+Edit
+adb tcpip 5555
+adb connect <device-ip>:5555
+Disconnect wireless ADB:
+
+bash
+Copy
+Edit
+adb disconnect <device-ip>:5555
+Backup and Restore:
+Backup device data:
+
+bash
+Copy
+Edit
+adb backup -apk -shared -all -f <backup-file>
+Restore device data:
+
+bash
+Copy
+Edit
+adb restore <backup-file>
+Development and Debugging:
+Install a specific app's APK:
+
+bash
+Copy
+Edit
+adb install -r <app-package>.apk
+Get app logs:
+
+bash
+Copy
+Edit
+adb logcat -s <tag>
+Start a specific activity on the device:
+
+bash
+Copy
+Edit
+adb shell am start -n <package>/<activity>
+Network and Device Communication:
+Forward port from the device to the PC:
+
+bash
+Copy
+Edit
+adb forward tcp:<host-port> tcp:<device-port>
+Kill a process on the device:
+
+bash
+Copy
+Edit
+adb shell kill <pid>
+Battery and Power Management:
+Get battery status:
+
+bash
+Copy
+Edit
+adb shell dumpsys battery
+Enable/Disable USB debugging:
+
+bash
+Copy
+Edit
+adb shell settings put global adb_enabled 1  # Enable
+adb shell settings put global adb_enabled 0  # Disable
+Other Useful Commands:
+Show the device's file system:
+
+bash
+Copy
+Edit
+adb shell ls
+Find specific app information:
+
+bash
+Copy
+Edit
+adb shell dumpsys package <package-name>
+Simulate a swipe event:
+
+bash
+Copy
+Edit
+adb shell input swipe <x1> <y1> <x2> <y2>
+ADB Debugging and Development:
+Check ADB debug logs:
+
+bash
+Copy
+Edit
+adb logcat
